@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Metadados básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso HTML e CSS</title>
+    <title>Curso HTML CSS JAVASCRIPT</title>
+    <!-- Link para o arquivo de estilos CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Cabeçalho com navegação -->
     <header>
+        <!-- Menu de navegação principal -->
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
@@ -15,31 +19,84 @@
                 <li><a href="pages/contato.html">Contato</a></li>
             </ul>
         </nav>
+        <!-- Toggle para modo escuro -->
+        <div class="dark-mode-toggle">
+            <label for="darkModeToggle">Modo Escuro</label>
+            <input type="checkbox" id="darkModeToggle">
+        </div>
     </header>
 
+    <!-- Conteúdo principal -->
     <main>
-        <h1>Bem-vindo ao Curso de HTML e CSS</h1>
+        <!-- Contador de visitas -->
+        <div class="visit-counter">
+            Número de visitas: <span id="visitCount">0</span>
+        </div>
+
+        <!-- Título principal -->
+        <h1>Bem-vindo ao Curso de HTML CSS JAVASCRIPT</h1>
+
+        <!-- Seção de tópicos do curso -->
         <section class="destaque">
             <h2>Tópicos do Curso</h2>
+            <!-- Grid de cards com os tópicos -->
             <div class="cards">
+                <!-- Card HTML -->
                 <div class="card">
                     <h3>HTML Básico</h3>
-                    <p>Estrutura, tags e elementos</p>
+                    <p>Aprenda a estrutura fundamental da web com HTML5. Explore tags semânticas, formulários, e as melhores práticas de marcação.</p>
+                    <ul>
+                        <li>Estrutura básica</li>
+                        <li>Tags semânticas</li>
+                        <li>Formulários</li>
+                        <li>SEO básico</li>
+                    </ul>
                 </div>
+                <!-- Card CSS -->
                 <div class="card">
                     <h3>CSS Fundamentos</h3>
-                    <p>Estilos, seletores e cores</p>
+                    <p>Domine os conceitos essenciais de estilização com CSS3. De seletores básicos a layouts complexos com Flexbox e Grid.</p>
+                    <ul>
+                        <li>Seletores e propriedades</li>
+                        <li>Flexbox e Grid</li>
+                        <li>Responsividade</li>
+                        <li>Animações</li>
+                    </ul>
                 </div>
+                <!-- Card JavaScript -->
                 <div class="card">
-                    <h3>Layout</h3>
-                    <p>Flexbox e Grid</p>
+                    <h3>JavaScript</h3>
+                    <p>Adicione interatividade aos seus sites com JavaScript. Aprenda manipulação do DOM, eventos e armazenamento local.</p>
+                    <ul>
+                        <li>Manipulação do DOM</li>
+                        <li>Eventos</li>
+                        <li>LocalStorage</li>
+                        <li>Validações</li>
+                    </ul>
                 </div>
             </div>
         </section>
+
+        <!-- Seção de informações sobre próxima turma -->
+        <section class="proxima-turma">
+            <h2>Próxima Turma</h2>
+            <div class="info-turma">
+                <p><strong>Data:</strong> 15 de Março de 2024</p>
+                <p><strong>Horário:</strong> 09:00 - 17:00</p>
+                <p><strong>Duração:</strong> 8 horas</p>
+                <p><strong>Vagas:</strong> 20 alunos</p>
+            </div>
+            <!-- Botão de inscrição -->
+            <a href="pages/contato.html" class="btn-inscricao">Fazer Inscrição</a>
+        </section>
     </main>
 
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2024 Curso HTML e CSS</p>
     </footer>
+
+    <!-- Script JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -15,34 +15,77 @@
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle">
+            <label for="darkModeToggle">Modo Escuro</label>
+            <input type="checkbox" id="darkModeToggle">
+        </div>
     </header>
 
     <main>
+        <div class="visit-counter">
+            Número de visitas: <span id="visitCount">0</span>
+        </div>
+
         <h1>Entre em Contato</h1>
         <section class="contato">
-            <form class="formulario">
-                <div class="form-grupo">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
+            <div class="info-contato">
+                <h2>Informações de Contato</h2>
+                <div class="contato-detalhes">
+                    <div class="contato-item">
+                        <h3>Email</h3>
+                        <p>curso@exemplo.com</p>
+                    </div>
+                    <div class="contato-item">
+                        <h3>Telefone</h3>
+                        <p>(11) 99999-9999</p>
+                    </div>
+                    <div class="contato-item">
+                        <h3>Horário de Atendimento</h3>
+                        <p>Segunda a Sexta: 9h às 18h</p>
+                    </div>
                 </div>
-                
-                <div class="form-grupo">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-grupo">
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" required></textarea>
-                </div>
-                
-                <button type="submit">Enviar</button>
-            </form>
+            </div>
+
+            <div class="form-section">
+                <h2>Formulário de Inscrição</h2>
+                <form class="formulario">
+                    <div class="form-grupo">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="mensagem">Por que você quer fazer o curso?</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label>
+                            <input type="checkbox" name="newsletter" id="newsletter">
+                            Desejo receber novidades sobre próximos cursos
+                        </label>
+                    </div>
+                    
+                    <button type="submit">Enviar Inscrição</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Curso HTML e CSS</p>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

@@ -1,29 +1,62 @@
-/* Reset básico */
+/* =============== RESET E CONFIGURAÇÕES BÁSICAS =============== */
+/* Reset básico para remover margens e paddings padrão e garantir consistência */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho total */
+    transition: all 0.3s ease; /* Adiciona transição suave para todas as propriedades */
 }
 
+/* Configurações básicas do corpo da página */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
     color: #333;
 }
 
-/* Header e Navegação */
+/* =============== MODO ESCURO =============== */
+/* Estilos específicos para quando o modo escuro está ativo */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #000;
+}
+
+.dark-mode .card {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+/* Ajustes de campos de formulário no modo escuro */
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+/* =============== HEADER E NAVEGAÇÃO =============== */
+/* Estilização do cabeçalho principal */
 header {
     background-color: #2c3e50;
     padding: 1rem;
+    display: flex; /* Layout flexível para alinhar itens */
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    align-items: center; /* Alinha itens verticalmente */
 }
 
+/* Estilização da lista de navegação */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2rem; /* Espaçamento entre itens do menu */
 }
 
+/* Estilização dos links de navegação */
 nav a {
     color: white;
     text-decoration: none;
@@ -31,13 +64,21 @@ nav a {
 }
 
 nav a:hover {
-    color: #3498db;
+    color: #3498db; /* Cor ao passar o mouse */
 }
 
-/* Main Content */
+/* =============== TOGGLE MODO ESCURO =============== */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+}
+
+/* =============== CONTEÚDO PRINCIPAL =============== */
 main {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Largura máxima para melhor legibilidade */
+    margin: 0 auto; /* Centraliza o conteúdo */
     padding: 2rem;
 }
 
@@ -47,19 +88,27 @@ h1 {
     margin-bottom: 2rem;
 }
 
-/* Cards */
+/* Ajuste do título no modo escuro */
+.dark-mode h1 {
+    color: #fff;
+}
+
+/* =============== CARDS =============== */
+/* Grid responsivo para os cards */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsivo */
     gap: 2rem;
     margin-top: 2rem;
 }
 
+/* Estilização individual dos cards */
 .card {
     background-color: #f8f9fa;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card h3 {
@@ -67,7 +116,48 @@ h1 {
     margin-bottom: 1rem;
 }
 
-/* Formulário */
+.card ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+/* =============== PRÓXIMA TURMA =============== */
+.proxima-turma {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.info-turma {
+    margin: 2rem 0;
+}
+
+.info-turma p {
+    margin: 0.5rem 0;
+}
+
+/* Botão de inscrição */
+.btn-inscricao {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inscricao:hover {
+    background-color: #3498db;
+}
+
+/* =============== FORMULÁRIO =============== */
 .formulario {
     max-width: 600px;
     margin: 0 auto;
@@ -75,19 +165,28 @@ h1 {
 
 .form-grupo {
     margin-bottom: 1.5rem;
+    position: relative;
 }
 
+/* Estilização de labels */
 label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
+/* Estilização de campos de entrada */
 input, textarea {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3498db;
 }
 
 textarea {
@@ -95,6 +194,7 @@ textarea {
     resize: vertical;
 }
 
+/* Estilização de botões */
 button {
     background-color: #2c3e50;
     color: white;
@@ -102,16 +202,61 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #3498db;
 }
 
-/* Sobre */
+/* =============== MENSAGENS DE FEEDBACK =============== */
+/* Estilização de mensagens de erro */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Estilização de mensagens de sucesso */
+.success-message {
+    color: #27ae60;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.error {
+    border-color: #e74c3c;
+}
+
+/* =============== CONTADOR DE VISITAS =============== */
+.visit-counter {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.dark-mode .visit-counter {
+    color: #aaa;
+}
+
+/* =============== SEÇÃO SOBRE =============== */
 .sobre {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.sobre h2 {
+    margin: 2rem 0 1rem;
+    color: #2c3e50;
+}
+
+.dark-mode .sobre h2 {
+    color: #fff;
 }
 
 .objetivos {
@@ -123,7 +268,57 @@ button:hover {
     margin-bottom: 0.5rem;
 }
 
-/* Footer */
+/* =============== ESTRUTURA DO CURSO =============== */
+.estrutura {
+    margin-top: 2rem;
+}
+
+.estrutura h3 {
+    color: #2c3e50;
+    margin: 1.5rem 0 1rem;
+}
+
+.dark-mode .estrutura h3 {
+    color: #fff;
+}
+
+.estrutura ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+/* =============== SEÇÃO DE CONTATO =============== */
+.contato {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Layout em duas colunas */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.info-contato {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contato-detalhes {
+    margin-top: 1.5rem;
+}
+
+.contato-item {
+    margin-bottom: 1.5rem;
+}
+
+.contato-item h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.dark-mode .contato-item h3 {
+    color: #fff;
+}
+
+/* =============== RODAPÉ =============== */
 footer {
     background-color: #2c3e50;
     color: white;
@@ -134,8 +329,13 @@ footer {
     width: 100%;
 }
 
-/* Responsividade */
+.dark-mode footer {
+    background-color: #000;
+}
+
+/* =============== RESPONSIVIDADE =============== */
 @media (max-width: 768px) {
+    /* Ajustes para telas menores */
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -143,10 +343,19 @@ footer {
     }
 
     .cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .contato {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
     }
 
     main {
+        padding: 1rem;
+    }
+
+    .proxima-turma {
+        margin-top: 2rem;
         padding: 1rem;
     }
 }
