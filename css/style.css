@@ -1,9 +1,361 @@
 /* =============== RESET E CONFIGURAÇÕES BÁSICAS =============== */
 /* Reset básico para remover margens e paddings padrão e garantir consistência */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
     box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho total */
     transition: all 0.3s ease; /* Adiciona transição suave para todas as propriedades */
 }
 
+/* Configurações básicas do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte da página para Arial */
+    line-height: 1.6; /* Define o espaçamento entre linhas para uma melhor legibilidade */
+    color: #333; /* Define a cor do texto */
+}
+
+/* =============== MODO ESCURO =============== */
+/* Estilos específicos para quando o modo escuro está ativo */
+.dark-mode {
+    background-color: #1a1a1a; /* Define a cor de fundo escura para o modo escuro */
+    color: #fff; /* Define a cor do texto para o modo escuro */
+}
+
+.dark-mode header {
+    background-color: #000; /* Define a cor de fundo do cabeçalho no modo escuro */
+}
+
+.dark-mode .card {
+    background-color: #2c2c2c; /* Define a cor de fundo dos cards no modo escuro */
+    color: #fff; /* Define a cor do texto nos cards no modo escuro */
+}
+
+/* Ajustes de campos de formulário no modo escuro */
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #333; /* Define a cor de fundo para inputs e textarea no modo escuro */
+    color: #fff; /* Define a cor do texto para inputs e textarea no modo escuro */
+    border-color: #444; /* Define a cor da borda para inputs e textarea no modo escuro */
+}
+
+/* =============== HEADER E NAVEGAÇÃO =============== */
+/* Estilização do cabeçalho principal */
+header {
+    background-color: #2c3e50; /* Define a cor de fundo do cabeçalho */
+    padding: 1rem; /* Define o espaçamento interno do cabeçalho */
+    display: flex; /* Usa um layout flexível para alinhar os itens */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilização da lista de navegação */
+nav ul {
+    list-style: none; /* Remove o estilo de lista padrão (bolinhas) */
+    display: flex; /* Usa um layout flexível para os itens de navegação */
+    justify-content: center; /* Centraliza os itens de navegação */
+    gap: 2rem; /* Define o espaçamento entre os itens de navegação */
+}
+
+/* Estilização dos links de navegação */
+nav a {
+    color: white; /* Define a cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Torna o texto dos links em negrito */
+}
+
+nav a:hover {
+    color: #3498db; /* Altera a cor dos links ao passar o mouse sobre eles */
+}
+
+/* =============== TOGGLE MODO ESCURO =============== */
+.dark-mode-toggle {
+    display: flex; /* Usa layout flexível para alinhar os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 0.5rem; /* Define o espaçamento entre os itens */
+    color: white; /* Define a cor do texto do toggle */
+}
+
+/* =============== CONTEÚDO PRINCIPAL =============== */
+main {
+    max-width: 1200px; /* Define a largura máxima do conteúdo principal */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 2rem; /* Define o espaçamento interno do conteúdo */
+}
+
+h1 {
+    color: #2c3e50; /* Define a cor do título principal */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 2rem; /* Define o espaço abaixo do título */
+}
+
+/* Ajuste do título no modo escuro */
+.dark-mode h1 {
+    color: #fff; /* Define a cor do título no modo escuro */
+}
+
+/* =============== CARDS =============== */
+/* Grid responsivo para os cards */
+.cards {
+    display: grid; /* Usa o layout de grid para os cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria uma grade com colunas ajustáveis */
+    gap: 2rem; /* Define o espaçamento entre os cards */
+    margin-top: 2rem; /* Define o espaço acima dos cards */
+}
+
+/* Estilização individual dos cards */
+.card {
+    background-color: #f8f9fa; /* Define a cor de fundo dos cards */
+    padding: 1.5rem; /* Define o espaçamento interno dos cards */
+    border-radius: 8px; /* Cria bordas arredondadas nos cards */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Cria uma sombra suave ao redor dos cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Cria transições suaves para transformação e sombra */
+}
+
+.card h3 {
+    color: #2c3e50; /* Define a cor do título dentro do card */
+    margin-bottom: 1rem; /* Define o espaço abaixo do título */
+}
+
+.card ul {
+    list-style-position: inside; /* Define a posição das bolinhas na lista */
+    margin-top: 1rem; /* Define o espaço acima da lista */
+}
+
+.card li {
+    margin-bottom: 0.5rem; /* Define o espaço abaixo dos itens da lista */
+}
+
+/* =============== PRÓXIMA TURMA =============== */
+.proxima-turma {
+    margin-top: 4rem; /* Define o espaço acima da seção de próxima turma */
+    text-align: center; /* Centraliza o texto da seção */
+    padding: 2rem; /* Define o espaçamento interno da seção */
+    background-color: #f8f9fa; /* Define a cor de fundo da seção */
+    border-radius: 8px; /* Cria bordas arredondadas na seção */
+}
+
+.info-turma {
+    margin: 2rem 0; /* Define o espaço acima e abaixo das informações da turma */
+}
+
+.info-turma p {
+    margin: 0.5rem 0; /* Define o espaço entre os parágrafos dentro da informação da turma */
+}
+
+/* Botão de inscrição */
+.btn-inscricao {
+    display: inline-block; /* Faz o botão se comportar como um bloco, mas sem quebrar a linha */
+    padding: 1rem 2rem; /* Define o espaçamento interno do botão */
+    background-color: #2c3e50; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto no botão */
+    text-decoration: none; /* Remove sublinhado do link do botão */
+    border-radius: 4px; /* Cria bordas arredondadas no botão */
+    transition: background-color 0.3s ease; /* Cria uma transição suave para a cor de fundo ao passar o mouse */
+}
+
+.btn-inscricao:hover {
+    background-color: #3498db; /* Altera a cor de fundo do botão ao passar o mouse sobre ele */
+}
+
+/* =============== FORMULÁRIO =============== */
+.formulario {
+    max-width: 600px; /* Define a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário na página */
+}
+
+.form-grupo {
+    margin-bottom: 1.5rem; /* Define o espaço abaixo de cada grupo de formulário */
+    position: relative; /* Permite o posicionamento de elementos dentro do grupo */
+}
+
+/* Estilização de labels */
+label {
+    display: block; /* Faz o label se comportar como um bloco */
+    margin-bottom: 0.5rem; /* Define o espaço abaixo do label */
+    font-weight: bold; /* Torna o texto do label em negrito */
+}
+
+/* Estilização de campos de entrada */
+input, textarea {
+    width: 100%; /* Faz com que os campos de entrada ocupem toda a largura disponível */
+    padding: 0.8rem; /* Define o espaçamento interno dos campos */
+    border: 1px solid #ddd; /* Define a cor da borda dos campos */
+    border-radius: 4px; /* Cria bordas arredondadas nos campos */
+    transition: border-color 0.3s ease; /* Cria uma transição suave para a cor da borda */
+}
+
+input:focus, textarea:focus {
+    outline: none; /* Remove o contorno padrão ao focar no campo */
+    border-color: #3498db; /* Define a cor da borda ao focar no campo */
+}
+
+textarea {
+    height: 150px; /* Define a altura da área de texto */
+    resize: vertical; /* Permite o redimensionamento vertical da área de texto */
+}
+
+/* Estilização de botões */
+button {
+    background-color: #2c3e50; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    padding: 0.8rem 1.5rem; /* Define o espaçamento interno do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 4px; /* Cria bordas arredondadas no botão */
+    cursor: pointer; /* Aponta o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease; /* Cria uma transição suave para a cor de fundo ao passar o mouse */
+}
+
+button:hover {
+    background-color: #3498db; /* Altera a cor de fundo do botão ao passar o mouse sobre ele */
+}
+
+/* =============== MENSAGENS DE FEEDBACK =============== */
+/* Estilização de mensagens de erro */
+.error-message {
+    color: #e74c3c; /* Define a cor da mensagem de erro */
+    font-size: 0.875rem; /* Define o tamanho da fonte da mensagem de erro */
+    margin-top: 0.25rem; /* Define o espaço acima da mensagem de erro */
+}
+
+/* Estilização de mensagens de sucesso */
+.success-message {
+    color: #27ae60; /* Define a cor da mensagem de sucesso */
+    text-align: center; /* Centraliza o texto da mensagem de sucesso */
+    font-size: 1.25rem; /* Define o tamanho da fonte da mensagem de sucesso */
+    padding: 2rem; /* Define o espaçamento interno da mensagem */
+    background-color: #f8f9fa; /* Define a cor de fundo da mensagem */
+    border-radius: 8px; /* Cria bordas arredondadas na mensagem de sucesso */
+    margin-top: 1rem; /* Define o espaço acima da mensagem de sucesso */
+}
+
+.error {
+    border-color: #e74c3c; /* Define a cor da borda para campos com erro */
+}
+
+/* =============== CONTADOR DE VISITAS =============== */
+.visit-counter {
+    text-align: center; /* Centraliza o texto do contador de visitas */
+    margin-bottom: 2rem; /* Define o espaço abaixo do contador de visitas */
+    font-size: 0.875rem; /* Define o tamanho da fonte do contador de visitas */
+    color: #666; /* Define a cor do contador de visitas */
+}
+
+.dark-mode .visit-counter {
+    color: #aaa; /* Altera a cor do contador de visitas no modo escuro */
+}
+
+/* =============== SEÇÃO SOBRE =============== */
+.sobre {
+    max-width: 800px; /* Define a largura máxima da seção sobre */
+    margin: 0 auto; /* Centraliza a seção sobre */
+}
+
+.sobre h2 {
+    margin: 2rem 0 1rem; /* Define os espaços acima e abaixo do título */
+    color: #2c3e50; /* Define a cor do título da seção sobre */
+}
+
+.dark-mode .sobre h2 {
+    color: #fff; /* Altera a cor do título da seção sobre no modo escuro */
+}
+
+.objetivos {
+    margin: 1rem 0; /* Define o espaço acima e abaixo dos objetivos */
+    padding-left: 2rem; /* Define o espaçamento à esquerda dos objetivos */
+}
+
+.objetivos li {
+    margin-bottom: 0.5rem; /* Define o espaço abaixo dos itens da lista de objetivos */
+}
+
+/* =============== ESTRUTURA DO CURSO =============== */
+.estrutura {
+    margin-top: 2rem; /* Define o espaço acima da estrutura do curso */
+}
+
+.estrutura h3 {
+    color: #2c3e50; /* Define a cor do título da estrutura do curso */
+    margin: 1.5rem 0 1rem; /* Define o espaço acima e abaixo do título */
+}
+
+.dark-mode .estrutura h3 {
+    color: #fff; /* Altera a cor do título da estrutura do curso no modo escuro */
+}
+
+.estrutura ul {
+    list-style-position: inside; /* Define a posição das bolinhas na lista */
+    margin-left: 1rem; /* Define o espaço à esquerda da lista */
+}
+
+/* =============== SEÇÃO DE CONTATO =============== */
+.contato {
+    display: grid; /* Define o layout da seção de contato como grid */
+    grid-template-columns: 1fr 2fr; /* Define a estrutura da grid com duas colunas */
+    gap: 2rem; /* Define o espaço entre as colunas */
+    margin-top: 2rem; /* Define o espaço acima da seção de contato */
+}
+
+.info-contato {
+    background-color: #f8f9fa; /* Define a cor de fundo do bloco de informações de contato */
+    padding: 2rem; /* Define o espaçamento interno do bloco de informações */
+    border-radius: 8px; /* Cria bordas arredondadas no bloco de informações */
+}
+
+.contato-detalhes {
+    margin-top: 1.5rem; /* Define o espaço acima dos detalhes de contato */
+}
+
+.contato-item {
+    margin-bottom: 1.5rem; /* Define o espaço abaixo dos itens de contato */
+}
+
+.contato-item h3 {
+    color: #2c3e50; /* Define a cor do título dos itens de contato */
+    margin-bottom: 0.5rem; /* Define o espaço abaixo do título */
+}
+
+.dark-mode .contato-item h3 {
+    color: #fff; /* Altera a cor do título dos itens de contato no modo escuro */
+}
+
+/* =============== RODAPÉ =============== */
+footer {
+    background-color: #2c3e50; /* Define a cor de fundo do rodapé */
+    color: white; /* Define a cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 1rem; /* Define o espaçamento interno do rodapé */
+    position: fixed; /* Fixa o rodapé no fundo da página */
+    bottom: 0; /* Define o rodapé no fundo da página */
+    width: 100%; /* Faz o rodapé ocupar toda a largura da tela */
+}
+
+.dark-mode footer {
+    background-color: #000; /* Altera a cor de fundo do rodapé no modo escuro */
+}
+
+/* =============== RESPONSIVIDADE =============== */
+@media (max-width: 768px) {
+    /* Ajustes para telas menores */
+    nav ul {
+        flex-direction: column; /* Alinha os itens do menu em coluna em telas pequenas */
+        align-items: center; /* Centraliza os itens do menu */
+        gap: 1rem; /* Define o espaçamento entre os itens do menu */
+    }
+
+    .cards {
+        grid-template-columns: 1fr; /* Exibe uma única coluna para os cards em telas pequenas */
+    }
+
+    .contato {
+        grid-template-columns: 1fr; /* Exibe uma única coluna para a seção de contato em telas pequenas */
+    }
+
+    main {
+        padding: 1rem; /* Reduz o espaçamento interno em telas pequenas */
+    }
+
+    .proxima-turma {
+        margin-top: 2rem; /* Define o espaço acima da seção de próxima turma */
+        padding: 1rem; /* Reduz o espaçamento interno na seção */
+    }
+}
