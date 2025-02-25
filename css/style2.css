@@ -1,0 +1,147 @@
+/* =============== RESET E CONFIGURAÇÕES BÁSICAS =============== */
+/* Reset básico para remover margens e paddings padrão e garantir consistência */
+* {
+    margin: 0; /* "Remove" a margem padrão de todos os elementos */
+    padding: 0; /* "Remove" o padding padrão de todos os elementos */
+    box-sizing: border-box; /* "Inclui" padding e borda no cálculo do tamanho total */
+    transition: all 0.3s ease; /* "Adiciona" transição suave para todas as propriedades */
+}
+
+/* Configurações básicas do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* "Define" a fonte da página para Arial */
+    line-height: 1.6; /* "Espaçamento" entre linhas para melhor legibilidade */
+    color: #333; /* "Define" a cor do texto */
+}
+
+/* =============== MODO ESCURO =============== */
+/* Estilos específicos para quando o modo escuro está ativo */
+.dark-mode {
+    background-color: #1a1a1a; /* "Cor" de fundo escura para o modo escuro */
+    color: #fff; /* "Cor" do texto para o modo escuro */
+}
+
+.dark-mode header {
+    background-color: #000; /* "Cor" de fundo do cabeçalho no modo escuro */
+}
+
+.dark-mode .card {
+    background-color: #2c2c2c; /* "Cor" de fundo dos cards no modo escuro */
+    color: #fff; /* "Cor" do texto nos cards no modo escuro */
+}
+
+/* Ajustes de campos de formulário no modo escuro */
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #333; /* "Cor" de fundo para inputs e textarea no modo escuro */
+    color: #fff; /* "Cor" do texto para inputs e textarea no modo escuro */
+    border-color: #444; /* "Cor" da borda para inputs e textarea no modo escuro */
+}
+
+/* =============== HEADER E NAVEGAÇÃO =============== */
+/* Estilização do cabeçalho principal */
+header {
+    background-color: #2c3e50; /* "Cor" de fundo do cabeçalho */
+    padding: 1rem; /* "Espaçamento" interno do cabeçalho */
+    display: flex; /* "Layout flexível" para alinhar itens */
+    justify-content: space-between; /* "Distribui" espaço entre os elementos */
+    align-items: center; /* "Alinha" itens verticalmente */
+}
+
+/* Estilização da lista de navegação */
+nav ul {
+    list-style: none; /* "Remove" o estilo de lista (bolinhas) */
+    display: flex; /* "Define" a navegação como flexível */
+    justify-content: center; /* "Centraliza" os itens do menu */
+    gap: 2rem; /* "Espaçamento" entre itens do menu */
+}
+
+/* Estilização dos links de navegação */
+nav a {
+    color: white; /* "Cor" do texto do link */
+    text-decoration: none; /* "Remove" o sublinhado dos links */
+    font-weight: bold; /* "Torna" o texto do link em negrito */
+}
+
+nav a:hover {
+    color: #3498db; /* "Cor" do link ao passar o mouse */
+}
+
+/* =============== TOGGLE MODO ESCURO =============== */
+.dark-mode-toggle {
+    display: flex; /* "Layout flexível" para alinhar itens */
+    align-items: center; /* "Alinha" os itens verticalmente */
+    gap: 0.5rem; /* "Espaçamento" entre os itens */
+    color: white; /* "Cor" do texto */
+}
+
+/* =============== CONTEÚDO PRINCIPAL =============== */
+main {
+    max-width: 1200px; /* "Largura" máxima para melhorar a legibilidade */
+    margin: 0 auto; /* "Centraliza" o conteúdo */
+    padding: 2rem; /* "Espaçamento" interno do conteúdo principal */
+}
+
+h1 {
+    color: #2c3e50; /* "Cor" do título principal */
+    text-align: center; /* "Centraliza" o título */
+    margin-bottom: 2rem; /* "Espaço" abaixo do título */
+}
+
+/* Ajuste do título no modo escuro */
+.dark-mode h1 {
+    color: #fff; /* "Cor" do título no modo escuro */
+}
+
+/* =============== CARDS =============== */
+/* Grid responsivo para os cards */
+.cards {
+    display: grid; /* "Usando" grid para exibir os cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* "Layout flexível" para ajustar os cards */
+    gap: 2rem; /* "Espaçamento" entre os cards */
+    margin-top: 2rem; /* "Espaço" acima dos cards */
+}
+
+/* Estilização individual dos cards */
+.card {
+    background-color: #f8f9fa; /* "Cor" de fundo dos cards */
+    padding: 1.5rem; /* "Espaçamento" interno dos cards */
+    border-radius: 8px; /* "Bordas" arredondadas */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* "Sombra" suave para os cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* "Efeitos" de transição suave para transformação e sombra */
+}
+
+.card h3 {
+    color: #2c3e50; /* "Cor" do título dos cards */
+    margin-bottom: 1rem; /* "Espaço" abaixo do título */
+}
+
+.card ul {
+    list-style-position: inside; /* "Define" a posição das bolinhas na lista */
+    margin-top: 1rem; /* "Espaço" acima da lista */
+}
+
+.card li {
+    margin-bottom: 0.5rem; /* "Espaço" entre os itens da lista */
+}
+
+/* =============== PRÓXIMA TURMA =============== */
+.proxima-turma {
+    margin-top: 4rem; /* "Espaço" acima da seção */
+    text-align: center; /* "Centraliza" o texto */
+    padding: 2rem; /* "Espaçamento" interno da seção */
+    background-color: #f8f9fa; /* "Cor" de fundo da seção */
+    border-radius: 8px; /* "Bordas" arredondadas */
+}
+
+.info-turma {
+    margin: 2rem 0; /* "Espaço" acima e abaixo das informações da turma */
+}
+
+.info-turma p {
+    margin: 0.5rem 0; /* "Espaço" entre os parágrafos */
+}
+
+/* Botão de inscrição */
+.btn-inscricao {
+    display: inline-block; /* "Faz" o botão se comportar como um bloco, mas sem quebrar a linha */
