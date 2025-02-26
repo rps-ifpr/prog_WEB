@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="full">
+<head>
+<title>Oi, eu sou o Goku!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+* {
+	box-sizing: border-box;
+}
+	
+.full {
+  background: url(back.png) no-repeat center center fixed; 
+  background-size: cover;
+}
+
+body {
+	font-family:"Lucida Sans", Verdana, sans-serif;
+	margin: 0px;
+}
+
+
+header {
+	float:left;
+	width:100%;
+	padding: 1%;
+	margin-bottom: 2.5%;
+	background-color: rgba(240,240,240,0.8);
+	border-radius: 20px;
+	text-align: center;
+}
+
+nav {
+	float: left;
+	width: 25%;
+	padding: 2%;
+	padding-top: 0px; 
+}
+
+	nav .menuitem {
+		padding: 5%;
+		border-bottom: 1px dashed #e9e9e9;
+		cursor:pointer;
+		background-color: rgba(255,222,200,0.8);
+		margin-bottom: 5px;
+		border-radius: 20px;
+		text-align: center;
+	}
+
+	nav .menuitem:hover {
+		background-color: #ffeecc;		
+	}
+
+article {
+	float: left;
+	width:45%;
+	padding: 2% 4% 1% 4%;
+	margin-right: 5%;
+
+	margin-bottom: 1%;
+	text-align: center;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 20px;
+}
+
+	article h1 {
+		margin-top: 0px;	
+	}
+
+	article p {
+		text-align: justify;		
+	}
+
+	article img {
+		width:50%;
+	}
+
+aside {
+	float: left;
+	width: 25%;
+	padding: 2%;
+	background-color: rgba(80,80,120,0.8);
+	color: #fff;
+	border-radius: 20px;
+	text-align: center;;
+}
+
+	aside p {
+		font-size: 0.85em;
+	}
+	
+	aside h2{
+		font-size: 1em;
+	}
+
+footer {
+	float: left;
+	width:100%;
+	margin-bottom:1%;
+	padding: 1%;
+	text-align:center;
+	background-color: rgba(233,255,200,0.8);;
+	border-bottom: 2px dashed #000;
+	font-size:0.75em;
+}
+
+section {
+	width:80%;
+	margin: auto;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+	
+	section {
+		width:95%;
+	}
+
+	nav {
+		width:100%;
+	}
+
+		nav .menuitem {
+			margin: 1%;
+			padding:1%;
+			line-height: 25pt;
+		}
+
+	article {
+		width:100%;
+	}
+	
+		article img {
+			width:75%;
+		}
+
+	sectin {
+		padding:1%;
+	}
+
+	aside {
+		width:100%;
+		padding: 1%;
+	}
+}
+
+</style>
+</head>
+
+<body>
+<section>
+	
+<header>
+	<h1>Dragon Ball!</h1>
+</header>
+
+<nav>
+	<div class="menuitem">Dragon Ball</div>
+	<div class="menuitem">Dragon Ball Z</div>
+	<div class="menuitem">Dragon Ball GT</div>
+</nav>
+
+<article>
+	<h1>Oi, eu sou o Goku!</h1>
+	<p>Goku é um guerreiro saiyajin extremamente forte e habilidoso em artes marciais, que se tornou um defensor do universo ao longo de suas várias batalhas. Goku é conhecido por seu senso de justiça, sua coragem e sua determinação em proteger seus amigos e sua família, além de seu amor pela comida. Ao longo de suas várias aventuras, Goku enfrentou inúmeros inimigos poderosos e foi responsável por salvar o mundo várias vezes.</p>
+	<img src="goku.png" alt="Goku">
+</article>
+
+<aside >
+	<h2>Você sabia?</h2>
+	<p>Kuririn é conhecido por ser um amigo próximo e companheiro de luta de Goku. Ele é um humano com habilidades em artes marciais e é frequentemente mostrado como sendo corajoso e leal.</p>
+	<p>Apesar de ter uma aparência careca, Kuririn na verdade tem pequenos cabelos no topo de sua cabeça que são raspados regularmente.</p>
+</aside>
+
+
+<footer>
+	<p>Esta página Web serve apenas para ilustrar o uso de Media Queries CSS em um layout responsível. Nenhum direito reservado. 2024.</p>
+</footer>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Media Queries CSS - Cor</title>
+
+</head>
+
+<style>
+
+body {
+    background-color: red;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        background-color: blue;
+    }
+}
+
+</style>
+
+<body>
+
+<p>Esta página tem o seguinte CSS, tornando-a vermelha:</p>
+
+<code>
+body {
+    background-color: red;
+}
+</code>
+
+<p>Porém, o código abaixo faz com que, ao redimensionar o navegador, outro CSS seja ativado sempre que o tamanho do navegador seja menor que 700px, fazendo com a página torne-se azul!</p>
+
+<code>
+@media screen and (max-width: 700px) {
+    body {
+        background-color: blue;
+    }
+}
+</code>
+
+</body>
+</html>
