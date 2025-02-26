@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+html, body {
+	margin: 0px;
+	font-family: Arial, sans-serif;
+}
+
+header	{ grid-area: topo}
+nav		{ grid-area: menu; }
+section { grid-area: conteudo; }
+aside	{ grid-area: relacionado; }
+footer	{ grid-area: rodape; }
+
+.grid-container {
+	display: grid;
+	
+	grid-template-areas:
+		'topo topo topo topo topo topo'
+		'menu conteudo conteudo conteudo relacionado relacionado'
+		'menu rodape rodape rodape rodape rodape';
+		
+	background-color: #eeeeee;
+	gap: 10px;
+	padding: 10px;
+}
+
+header, nav, section, aside, footer {
+  background-color: rgba(255, 255, 255, 0.9); 
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav {
+	display: grid;
+}
+
+nav a {
+	color: #009966;
+	grid-column: 1;
+}
+
+nav a:hover {
+	color: #000;
+}
+
+header {
+	background-color: #E0577D;
+	color: white;
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+section {
+	background-color: rgba(255,255,255,1);
+}
+
+footer {
+	background-color: #002060;
+	color: white;
+	font-size: 8pt;
+}
+
+nav {
+	background-color: #000;
+	color: white;
+}
+
+aside {
+	background-color: #ddd;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  padding: 8px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+nav li:hover {
+  background-color: #F8859D;
+  cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="grid-container">
+	<header>
+		Banner
+	</header>
+	
+	<nav>
+		<ul>
+			<li>Home</li>
+			<li>Produtos</li>
+			<li>Contato</li>
+		</ul>
+	</nav>
+	
+	<section>
+		<p>Este é um texto de mentira para exemplificar um layout com HTML + CSS + Grid.	</p>
+	</section>  
+	
+	<aside>
+		Outro conteúdo relacionado.
+	</aside>
+	
+	<footer>
+		Rodapé
+	</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: #ddd;
+  margin: 10px;
+}
+
+div {
+  background-color: #E0577D;
+  color: #ffffff;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+#div_item2 { flex-basis: 300px }
+
+</style>
+</head>
+<body>
+
+<h1>FlexBox!</h1>
+
+<p>Itens com diferentes tamanhos:</p>
+<section class='flex-container'>
+  <div id='div_item1'>Item 1</div>
+  <div id='div_item2'>Item 2</div>
+  <div id='div_item3'>Item 3</div>  
+</section>
+
+
+</body>
+</html>
+
+

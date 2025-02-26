@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container-vertical {
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd;
+  margin: 10px;
+}
+
+.flex-container-horizontal {
+  display: flex;
+  flex-direction: row;
+  background-color: #ddd;
+  margin: 10px;
+}
+
+div {
+  background-color: #E0577D;
+  color: #ffffff;
+  width: 80px;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  flex: 1;
+}
+</style>
+</head>
+<body>
+
+<h1>FlexBox!</h1>
+
+<p>Usando column:</p>
+<section class='flex-container-vertical'>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>  
+</section>
+
+<p>Usando row:</p>
+<section class='flex-container-horizontal'>
+  <div>Item 1 (row)</div>
+  <div>Item 2 (row)</div>
+  <div>Item 3 (row)</div>  
+</section>
+
+</body>
+</html>
+
+

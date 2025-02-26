@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #ddd;
+  margin: 10px;
+  height: 150px;
+}
+
+.flex-container-alinhamento-vertical {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #ddd;
+  margin: 10px;
+  height:150px;
+}
+
+.flex-container-bem-no-meinho {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  margin: 10px;
+  height:150px;
+}
+
+div {
+  background-color: #E0577D;
+  color: #ffffff;
+  width: 80px;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>FlexBox!</h1>
+
+
+<p>Flex e Wrap</p>
+<section class='flex-container'>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>  
+</section>
+
+<p>Flex, Wrap e "align-items: center;"</p>
+<section class='flex-container-alinhamento-vertical'>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>  
+</section>
+
+<p>Flex, Wrap e "align-items: center; justify-content: center;"</p>
+<section class='flex-container-bem-no-meinho'>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>  
+</section>
+
+
+</body>
+</html>
+
+

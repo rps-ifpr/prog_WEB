@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #ddd;
+  margin: 10px;
+}
+
+.flex-container-nowrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #ddd;
+  margin: 10px;
+}
+
+div {
+  background-color: #E0577D;
+  color: #ffffff;
+  width: 80px;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>FlexBox!</h1>
+
+<p>flex-wrap: nowrap;</p>
+<section class='flex-container-nowrap'>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>  
+  <div>Item 4</div>
+  <div>Item 5</div>
+  <div>Item 6</div>  
+  <div>Item 7</div>
+  <div>Item 8</div>
+</section>
+
+<p>flex-wrap: wrap;</p>
+<section class='flex-container-wrap'>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>  
+  <div>Item 4</div>
+  <div>Item 5</div>
+  <div>Item 6</div>  
+  <div>Item 7</div>
+  <div>Item 8</div>
+</section>
+
+</body>
+</html>
+
+

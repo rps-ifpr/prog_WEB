@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mesmo Layout: Float</title>
+
+<style>
+* {
+	box-sizing: border-box;
+	margin: 0px;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header, nav, section, article, footer {
+	padding: 50px;
+}
+
+header {
+	background-color: #f1f1f1;
+	text-align: center;
+	font-size: 26pt;
+}
+
+
+nav {
+	float: left;
+	width: 33%;
+	min-height: 400px;
+}
+
+
+section {
+	float: left;
+	width: 67%;
+	background-color: #E8FEFB;
+	min-height: 400px;
+}
+
+
+footer {
+	float: left;
+	width: 100%;
+	
+	background-color: #f1f1f1;
+	padding: 10px;
+	text-align: center;
+	font-size: 10pt;
+	clear: both;
+}
+
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	padding: 8px;
+	margin-bottom: 8px;
+	background-color: #33b5b5;
+	color: #fff;
+}
+
+nav li:hover {
+	background-color: #55d7d7;
+	cursor: pointer;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+	<h2>Topo</h2>
+</header>
+
+<nav>
+	<ul>
+		<li>Início</li>
+		<li>Quem Somos</li>
+		<li>Nossos serviços</li>
+		<li>Fale Conosco</li>
+	</ul>
+</nav>
+
+<section>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam diam eget eros malesuada, vel iaculis elit lobortis. Duis pulvinar massa sit amet ante rutrum ultricies. Aenean euismod, lorem ac ullamcorper consequat, risus lectus semper ex, ut vehicula sapien felis ut metus.
+	</p>
+
+	<p>
+	Nullam at elit a nisl sodales dignissim. Sed eu augue vel nisi rutrum bibendum. Maecenas volutpat tellus a odio consectetur, at sagittis quam tempor. In euismod, velit quis bibendum pretium, odio lacus congue quam, id aliquet nibh magna at velit.
+	</p>
+</section>
+
+<footer>
+	<p>Todos os direitos reservados. 2023. &copy</p>
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  align-content: center;
+  background-color: #ddd;
+  margin: 10px;
+}
+
+div {
+  background-color: #E0577D;
+  color: #ffffff;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+}
+
+/* grid-area: linha inicial / coluna inicial / linha final / coluna final */
+
+#div1  {grid-area: 1/1/1/5;}
+#div2  {grid-area: 2/1/5/1;}
+#div3  {grid-area: 2/2/2/5;}  
+#div4  {}
+#div5  {}
+#div6  {} 
+#div7  {}
+#div8  {grid-area: 3/4/5/4;} 
+#div9  {grid-area: 5/1/5/5;} 
+
+</style>
+</head>
+<body>
+
+<h1>CSS Grid!</h1>
+
+<p>"grid-column" e "grid-row" definem em que linha e coluna cada item começa e termina!</p>
+<p>"grid-area" especifica "grid-column" e "grid-row" ao mesmo tempo.</p>
+
+<section class="grid-container">
+  <div id='div1'>1</div>
+  <div id='div2'>2</div>
+  <div id='div3'>3</div>  
+  <div id='div4'>4</div>
+  <div id='div5'>5</div>
+  <div id='div6'>6</div> 
+  <div id='div7'>7</div>
+  <div id='div8'>8</div> 
+  <div id='div9'>9</div> 
+</section>
+
+</section>
+
+
+
+</body>
+</html>
+
+
