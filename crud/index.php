@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Modelo de CRUD para Essentia Pharma</title>
+    <title>Modelo de CRUD</title>
     <link rel="stylesheet" type="text/css" href="styles.css" async>
     <script src="scripts.js"></script>
 </head>
@@ -37,6 +37,6 @@
 <div id="lista">
     <script type="text/javascript">carregarLista();</script>
 </div>
-<p class="rodape">coded by <a href="http://mariosam.com.br/">Mario SAM</a>!</p>
+<p class="rodape">coded by <a href="">Mario SAM</a>!</p>
 </body>
 </html>

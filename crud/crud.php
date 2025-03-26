@@ -1,15 +1,15 @@
 <?php
 
-//dados de conexao com banco de dados do sistema
-$host   = "localhost";
+
+$host   = "localhost:3306";
 $user   = "root";
 $pass   = "root";
 $db     = "db_crud_teste";
 
-//captura acao que deve ser executada
+
 $a = $_REQUEST["action"];
 
-//identifica acao e invoca metodo a ser executado
+
 switch ( $a ) {
     case "lista":
         carregarLista(); break;
@@ -21,9 +21,7 @@ switch ( $a ) {
         carregarCliente(); break;
 }
 
-//*****************************************************************************
-// Metodo que carrega lista de clientes cadastrados
-//
+
 function carregarLista() {
     //abre conexao com banco de dados
     global $host, $user, $pass, $db;
@@ -66,9 +64,7 @@ function carregarLista() {
     $mysqli->close();
 }
 
-//*****************************************************************************
-// Metodo que carrega dados do cliente selecionado para alteracao
-//
+
 function carregarCliente() {
     //var_dump($_POST);
     if ( ! isset( $_POST ) || empty( $_POST ) ) {
@@ -109,9 +105,7 @@ function carregarCliente() {
     }
 }
 
-//*****************************************************************************
-// Metodo que salva ou atualiza form de cadastro do cliente
-//
+
 function salvarForm() {
     //var_dump($_POST);
     if ( ! isset( $_POST ) || empty( $_POST ) ) {
@@ -179,9 +173,7 @@ function salvarForm() {
     $mysqli->close();
 }
 
-//*****************************************************************************
-// Metodo que exclui registro do cliente
-//
+
 function excluirForm() {
     //var_dump($_POST);
     if ( ! isset( $_POST ) || empty( $_POST ) ) {
@@ -213,9 +205,8 @@ function excluirForm() {
     }
 }
 
-//*****************************************************************************
-// Metodo que persiste dados do formulario em server-side
-//
+
+
 function validarForm( $id, $nome, $email, $telefone, $foto ) {
     //validar campo nome
     if ( $nome == null || trim( $nome ) == "" ) {

@@ -151,7 +151,7 @@ function salvarForm() {
   	//submete para server-side
   	//xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   	xhttp.open("POST", "crud.php?action=salvar", true);
-  	xhttp.send( formData );
+  	xhttp.send(formData);
 }
 
 //*****************************************************************************
