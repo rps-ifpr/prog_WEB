@@ -1,13 +1,3 @@
-/**
- * CRUD Teste para Essentia Pharma
- *
- * @category    CRUD
- * @package     crud
- * @copyright  Copyright (c) 2018 Mario SAM (http://www.mariosam.com.br)
- * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- */
-
-//*****************************************************************************
 // Metodo que inclui/altera acoes de elementos da pagina depois que a pagina foi carregada
 //
 window.onload = function() {

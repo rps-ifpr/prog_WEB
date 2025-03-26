@@ -1,12 +1,4 @@
 <?php
-/**
- * CRUD Teste para Essentia Pharma
- *
- * @category    CRUD
- * @package     crud
- * @copyright  Copyright (c) 2018 Mario SAM (http://www.mariosam.com.br)
- * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- */
 
 //dados de conexao com banco de dados do sistema
 $host   = "localhost";
