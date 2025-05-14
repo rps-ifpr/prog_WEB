@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Modelo de CRUD</title>
+    <title>Modelo de CRUD </title>
     <link rel="stylesheet" type="text/css" href="styles.css" async>
     <script src="scripts.js"></script>
 </head>
@@ -22,11 +22,13 @@
         <legend>Telefone:</legend>
         <input id="telefone" type=text class=input-text required pattern="\d*" placeholder="Seu telefone? (apenas números)" size=10 name=telefone onFocus="inputOn(this)" onBlur="inputOff(this)"/>
     </fieldset>
+
     <fieldset>
         <legend>Foto:</legend>
         <input type=file id="foto" name=foto class=input-text accept="image/png, image/jpeg"/>
         <img id="image" class=thumb />
     </fieldset>
+    
     <input id="id" type=hidden value="-1" />
     <input id="nomeFoto" type=hidden value="" />
     <input type=reset class=button id="btnLimpar" value="Limpar" />
@@ -37,6 +39,6 @@
 <div id="lista">
     <script type="text/javascript">carregarLista();</script>
 </div>
-<p class="rodape">coded by <a href="">Mario SAM</a>!</p>
+<p class="rodape">CRUD TESTE by</a>!</p>
 </body>
 </html>
